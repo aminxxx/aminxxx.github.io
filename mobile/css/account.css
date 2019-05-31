@@ -134,6 +134,9 @@ html {
   height: 1rem;
   line-height: 1rem;
   display: none;
+  position: absolute;
+  left: 5%;
+  top: 30%;
 }
 /* 立即支付 */
 .footer {

@@ -2,7 +2,7 @@
 body,
 html {
   width: 100vw;
-  height: 12.99rem;
+  height: 100vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -114,11 +114,11 @@ html {
   -webkit-animation: scale 6s 2s infinite;
   animation: scale 6s 2s infinite ;
 }
-@media all and (min-width: 400px) and (max-width: 460px) {
-  .active_page {
-    background-size: 100% 90%;
-  }
-  .content {
-    height: 11.3rem;
-  }
-}
+/* @media all and (min-width:400px) and (max-width:460px){
+	.active_page{
+		background-size:100% 90%;
+	}
+	.content{
+		height:11.3rem;
+	}
+} */

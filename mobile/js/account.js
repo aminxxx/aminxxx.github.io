@@ -35,6 +35,7 @@ function account(){
 				$('.tips').html('请选择支付方式！').show();
 			}
 		}
+		setTimeout(function(){$('.tips').hide();},1000)//提示隐藏
 	})
 	//点击确定
 	$('.popout button').eq(0).on('tap',function(){
@@ -49,7 +50,7 @@ function account(){
 		}else{
 			$('.tips').html('请输入密码！').show();
 		}
-			
+		setTimeout(function(){$('.tips').hide();},1000)//提示隐藏	
 	})
 	//点击取消
 	$('.popout button').eq(1).on('tap',function(){
@@ -61,5 +62,5 @@ function account(){
 		window.location.href = 'defeated.html';
 		window.location.href = 'defeated.html';
 	})
-	setTimeout(function(){$('.tips').hide();},1000)//提示隐藏
+	
 }

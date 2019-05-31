@@ -90,6 +90,13 @@
 	<script type="text/javascript" src="js/storage.js"></script>
 	<script src="js/public.js"></script>
 	<script>
+		//搜索
+		fnSearch()
+		function fnSearch(){
+			$('.seach input').on('focus',function(){
+				window.location.href = 'hot.html';
+			})	
+		}
 		var product = storage.get('success');//获取数据
 		var vm = new Vue({
 			el : '.wrap',

@@ -43,10 +43,3 @@ function tapFn(){
 	})
 	
 }
-//搜索
-fnSearch()
-function fnSearch(){
-	$('.seach input').on('focus',function(){
-		window.location.href = 'hot.html';
-	})	
-}

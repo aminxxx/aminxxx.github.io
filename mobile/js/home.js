@@ -30,6 +30,13 @@ $('.recommend').on('touchstart',function(ev){
 		window.location.href = "details.html#shopId="+id;
 	}
 })
+//搜索
+fnSearch()
+function fnSearch(){
+	$('.seach input').on('focus',function(){
+		window.location.href = 'hot.html';
+	})	
+}
 
 
 
