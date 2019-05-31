@@ -42,7 +42,7 @@ if(str == 'shopId'){//判断是哪个页面的数据
 
 //点击添加购物车,判断是否登录过
 
-$('.car').on('tap',function(){
+$('.car').on('touchstart',function(){
 	var userInfo = window.localStorage.getItem('userInfo');//获取用户信息，判断是否登录
 	
 	
@@ -51,13 +51,13 @@ $('.car').on('tap',function(){
 			var json = recommendData.filter(function(item,i){
 				return item.id == id
 			})[0];
-			console.log(json)
+			//console.log(json)
 			storage.set('productInfo',json)
 		}else if(str == 'productId'){
 			var json = productData.filter(function(item,i){
 				return item.id == id
 			})[0];
-			console.log(json)
+			//console.log(json)
 			storage.set('productInfo',json)
 		}
 		$('.tips').show();
@@ -66,6 +66,27 @@ $('.car').on('tap',function(){
 		},1000)
 		
 		
+	}else{
+		window.location.href = 'login.html';
+	}
+})
+//点击立即购买
+$('.now').on('touchstart',function(){
+	var userInfo = window.localStorage.getItem('userInfo');//获取用户信息，判断是否登录
+	if(userInfo){//登录了
+		if(str == 'shopId'){//判断是哪个页面的商品
+			var json = recommendData.filter(function(item,i){//筛选出选择的商品
+				return item.id == id
+			})[0];
+			storage.set('productInfo',json);
+			window.location.href = 'shoppingCar.html';
+		}else if(str == 'productId'){
+			var json = productData.filter(function(item,i){
+				return item.id == id
+			})[0];
+			storage.set('productInfo',json);
+			window.location.href = 'shoppingCar.html';
+		}
 	}else{
 		window.location.href = 'login.html';
 	}

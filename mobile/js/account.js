@@ -53,7 +53,13 @@ function account(){
 	})
 	//点击取消
 	$('.popout button').eq(1).on('tap',function(){
-			window.location.href = 'defeated.html';
+		var product = storage.get('indent');
+		for(var i=0;i<product.length;i++){
+			storage.set('defeated',product[i]);
+		}
+		window.localStorage.removeItem('indent');//把付款过的商品清除
+		window.location.href = 'defeated.html';
+		window.location.href = 'defeated.html';
 	})
 	setTimeout(function(){$('.tips').hide();},1000)//提示隐藏
 }

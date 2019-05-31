@@ -46,7 +46,7 @@
 				<em>查看更多订单＞</em>
 			</h3>
 			<div>
-				<span>
+				<span class="obligation">
 					<em class="iconfont icon-daifukuan"></em>
 					<a href="javascript:;">待付款</a>
 				</span>
@@ -123,6 +123,9 @@
 	<script>
 		$('.indent h3').on('touchstart',function(){
 			window.location.href='myorder.html';
+		})
+		$('.obligation').on('touchstart',function(){
+			window.location.href='obligation.html';
 		})
 	</script>
 </html>

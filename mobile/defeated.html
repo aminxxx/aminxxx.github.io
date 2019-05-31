@@ -27,5 +27,16 @@
 	<script type="text/javascript" src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
 	<script type="text/javascript" src="js/fx.js"></script>
 	<script src="js/public.js"></script>
-	<script src="js/defeated.js"></script>
+	<script>
+		defeatedFn()
+		function defeatedFn(){
+			$('.wrap button').eq(1).on('touchstart',function(){
+				window.location.href = 'myorder.html';
+			})
+			$('.wrap button').eq(0).on('touchstart',function(){
+				console.log(1)
+				window.location.href = 'obligation.html';
+			})
+		}
+	</script>
 </html>
