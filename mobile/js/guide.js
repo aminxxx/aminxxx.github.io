@@ -6,6 +6,11 @@ function screenPage(){
 		$('.content').show();
 	})
 	
+	//点击立即进入
+	$('.active_page').on('tap',function(){
+		$('.active_page').hide();
+		$('.content').show();
+	})
 	
  	var body = document.querySelector("body");
 	var content = document.querySelector(".content");

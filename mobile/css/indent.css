@@ -230,7 +230,6 @@ html {
 /* 地址 */
 .adder {
   width: 6rem;
-  height: 8rem;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -238,14 +237,22 @@ html {
   margin-top: -4rem;
   background: #fff;
   border: 1px solid #999;
-  padding: 0.5rem;
+  padding: 0 0.5rem;
   box-sizing: border-box;
   display: none;
+}
+.adder em {
+  float: right;
+  padding: 0.1rem;
+  margin-bottom: 0.5rem;
 }
 .adder p {
   width: 100%;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
+}
+.adder p:nth-of-type(1) {
+  margin-top: 0.5rem;
 }
 .adder p input {
   outline: none;
@@ -264,4 +271,12 @@ html {
   height: 0.6rem;
   display: block;
   margin: 0 auto;
+  margin-bottom: 0.5rem;
+}
+.adder .tips {
+  font-size: 18px;
+  color: red;
+  text-align: center;
+  margin-top: 0.5rem;
+  display: none;
 }
