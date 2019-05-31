@@ -1,0 +1,126 @@
+@charset 'utf-8';
+.background-size(){
+	-webkit-background-size:100% 100%;
+	background-size:100% 100%;
+}
+.boxBorder(@radius){
+	-webkit-border-radius : @radius;
+	border-radius : @radius;
+}
+body,html{
+	width:100vw;
+	height:12.99rem;
+	position: fixed;
+	top:0;
+	left:0;
+}
+.wrap{
+	width: 7.5rem;
+	overflow-x: hidden;
+	height: 100%;
+}
+.active_page{
+	width:100vw;
+	height:12.99rem;
+	background:url(../img/guide1.jpg) no-repeat;
+	.background-size();
+	position: relative;
+	button{
+		width:3.27rem;
+		height:0.5rem;
+		line-height: 0.5rem;
+		background:#f39800;
+		.boxBorder(0.22rem);
+		color:#fff;
+		font-size: 0.29rem;
+		border:none;
+		outline: none;
+		position:absolute;
+		bottom:1.8rem;
+		left:2.1rem;
+	}
+}
+@keyframes scale{
+	0%{
+		transform: scale(0);
+	}
+	100%{
+		transform: scale(1.5);
+	}
+}
+.content{
+	width:300%;
+	height:12.99rem;
+	position:absolute;
+	left:0;
+	top:0;
+	transition:1s;
+	overflow: hidden;
+	display: flex;
+	display:none;
+	.screen_page{
+		width:7.5rem;
+		flex: 1;
+		height:100%;
+		float:left;
+		position: relative;
+		&:nth-of-type(1){
+			background:url(../img/guide2.jpg) no-repeat;
+			.background-size();
+		}
+		&:nth-of-type(2){
+			background:url(../img/guide3.jpg) no-repeat;
+			.background-size();
+		}
+		&:nth-of-type(3){
+			background:url(../img/guide4.jpg) no-repeat;
+			.background-size();
+		}
+		span{
+			width:0.6rem;
+			height:0.6rem;
+			position:absolute;
+			right:0.3rem;
+			top:0.35rem;
+			.boxBorder(50%);
+			background:rgba(255, 255, 255, 0.3);
+			color:#fff;
+			text-align: center;
+			line-height: 0.6rem;
+			font-size: 0.25rem;
+			z-index:10;
+		}
+		em{
+			display:inline-block;
+			width:0.6rem;
+			height:0.6rem;
+			background:rgba(255, 255, 255, 0.2);
+			position:absolute;
+			right:0.3rem;
+			top:0.35rem;
+			-webkit-border-radius:50%;
+			border-radius: 50%;
+		}
+			em:nth-of-type(1){
+				-webkit-animation: scale 6s  infinite;
+				animation: scale 6s  infinite ;
+			}
+			em:nth-of-type(2){
+				-webkit-animation: scale 6s 3s infinite;
+				animation: scale 6s 3s infinite ;
+			}
+			em:nth-of-type(3){
+				-webkit-animation: scale 6s 2s infinite;
+				animation: scale 6s 2s infinite ;
+			}
+		}
+	}
+	
+@media all and (min-width:400px) and (max-width:460px){
+	.active_page{
+		background-size:100% 90%;
+	}
+	.content{
+		height:11.3rem;
+	}
+}

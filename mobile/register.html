@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/register.css">
+	<title>注册</title>
+</head>
+<body>
+	<div class="wrap">
+		<div class="mask">
+			<!-- 头部 -->
+			<div class="header">
+				<span class="header_return"></span>
+				<p>用户注册</p>
+			</div>
+			<!-- 登录 -->
+			<div class="register">
+				<p>会员名：<input type="text" placeholder="请输入您的会员名"></p>
+				<p>密码：<input type="password" placeholder="区分大小写"></p>
+				<p>验证码：
+					<input type="text" placeholder="请输入验证码">
+					<span>
+						<img src="img/code_03.png">
+					</span>
+					<i>换一张</i>
+				</p>
+				<label class="check">
+					<input type="checkbox">我已阅读并同意服务协议
+				</label>
+				<button class="btn">注册</button>
+				<p class="text">验证码错误</p>
+			</div>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript" src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+	<script type="text/javascript" src="js/fx.js"></script>
+	<script src="js/public.js"></script>
+	<script src="js/register.js"></script>
+</html>

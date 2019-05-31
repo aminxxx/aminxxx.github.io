@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/account.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1198556_wn71palgal.css">
+	<title>收银台</title>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="header">
+		<span class="header_return"></span>
+		<p>收银台</p>
+	</div>
+	<!-- 内容 -->
+	<div class="wrap">
+		<div class="info">
+			<span>
+				<i class="iconfont icon-iconbaomingyiqueren"></i>
+				<em>订单已经确认，请尽快支付！超过24小时则订单失效</em>
+			</span>
+			<p class="number">您的订单号为：<em>123456789</em></p>
+			<p class="money">需支付金额：￥<em>7999.00</em></p>
+		</div>
+		<!-- 支付方式 -->
+		<div class="pay">
+			<h3>请选择在线支付方式：</h3>
+			<ul class="list">
+				<li class="union">
+					<img src="img/pay1_03.png" >
+					<em>银联支付</em>
+					<i class="iconfont icon-select"></i>
+					<i class="iconfont icon-xuanzhong"></i>
+					<input type="hidden">
+				</li>
+				<li class="wechat">
+					<img src="img/pay2_06.png" >
+					<em>微信支付</em>
+					<i class="iconfont icon-select"></i>
+					<i class="iconfont icon-xuanzhong"></i>
+					<input type="hidden">
+				</li>
+				<li class="alipay">
+					<img src="img/pay3_10.png" >
+					<em>支付宝支付</em>
+					<i class="iconfont icon-select"></i>
+					<i class="iconfont icon-xuanzhong"></i>
+					<input type="hidden">
+				</li>
+			</ul>
+		</div>
+		<p class="tips">请选择支付方式！</p>
+		<!-- 底部 -->
+		<div class="footer">
+			<button class="btn">立即支付</button>
+		</div>
+		<!-- 弹框 -->
+		<div class="popout">
+			<input type="password" placeholder="请输入密码">
+			<button>确定</button>
+			<button class="">取消</button>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript" src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+	<script type="text/javascript" src="js/fx.js"></script>
+	<script src="js/public.js"></script>
+	<script type="text/javascript" src="js/storage.js"></script>
+	<script src="js/account.js"></script>
+</html>

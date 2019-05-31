@@ -1,0 +1,87 @@
+@charset 'utf-8';
+/* 去掉点击a标签的阴影问题 */
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body,
+html {
+  width: 100%;
+  min-height: 100%;
+}
+/* 头部 */
+.header {
+  width: 100%;
+  height: 0.94rem;
+  background: #2861ee;
+  padding: 0 0.2rem;
+  box-sizing: border-box;
+}
+.header span {
+  height: 100%;
+  width: 0.5rem;
+  float: left;
+  background: url(../img/return_03.png) no-repeat 0 center;
+  background-size: 0.25rem 0.48rem;
+}
+.header p {
+  font-size: 0.33rem;
+  color: #fff;
+  margin-left: 2.8rem;
+  display: inline-block;
+  line-height: 0.94rem;
+}
+.wrap {
+  width: 100%;
+  padding: 0.4rem 0.3rem 0;
+  box-sizing: border-box;
+}
+.wrap p:nth-of-type(1) {
+  text-align: center;
+  width: 100%;
+  height: 0.64rem;
+  line-height: 0.64rem;
+}
+.wrap p:nth-of-type(1) i {
+  font-style: normal;
+  font-size: 0.63rem;
+  color: #1296db;
+  vertical-align: middle;
+}
+.wrap p:nth-of-type(1) span {
+  display: inline-block;
+  font-size: 0.28rem;
+  color: #282828;
+  margin-left: 0.24rem;
+}
+.wrap p:nth-of-type(2) {
+  margin-top: 0.4rem;
+  text-align: center;
+  color: #656565;
+  font-size: 0.18rem;
+  margin-bottom: 0.93rem;
+}
+.wrap button {
+  display: block;
+  outline: none;
+  border: none;
+  width: 3.26rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.3rem;
+  margin: 0 auto;
+  margin-bottom: 0.2rem;
+  -webkit-border-radius: 0.48rem;
+  border-radius: 0.48rem;
+}
+.wrap button:nth-of-type(1) {
+  background: #f39800;
+  color: #fff;
+}
+.wrap button:nth-of-type(2) {
+  border: 1px solid #10a6ea;
+  color: #10a6ea;
+  background: #fff;
+}

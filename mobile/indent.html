@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/indent.css">
+	<script type="text/javascript" src="js/vue.js"></script>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1198556_wn71palgal.css">
+		<!-- 引入样式 -->
+	<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+	<!-- 引入组件库 -->
+	<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	<title>填写订单</title>
+	<style>
+		.el-select .el-input__inner{
+			width:1.4rem;
+			height:0.7rem;
+			padding: 0;
+			margin-left:0.2rem;
+		}
+		.el-select-dropdown__item{
+			padding:0;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="header">
+		<span class="header_return"></span>
+		<p>填写订单</p>
+	</div>
+	<div id="indent">
+		<!-- 订单信息 -->
+		<div class="site">
+			<p>
+				<i class="iconfont icon-dizhi"></i>
+				<em>江小白</em>
+				<em class="number">13800138000</em>
+				<i class="iconfont icon-daipingjia" @touchstart="changeAdder"></i>
+			</p>
+			<p class="location">
+				地址：广东省广州市天河区东圃恒顺大厦D栋401室 
+			</p>
+		</div>
+		<div class="bg"></div>
+		<!-- 商品 -->
+		<div class="product">
+			<ul class="list">
+				<li v-for="(item,index) in product">
+					<span>
+						<img :src="item.img">
+					</span>
+					<div>
+						<h3>{{item.title}}</h3>
+						<p>{{item.info}}</p>
+						<div>
+							<b>购买数量</b>
+							<span class="count">
+								<em @touchstart="dis(item)">＜</em>
+								<em>{{item.num}}</em>
+								<em @touchstart="add(item)">＞</em>
+							</span>
+						</div>
+						<p>选择的套餐:<em>官方标配</em></p>
+						<p>价格 ： {{item.price}}</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!-- 配送方式 -->
+		<div class="way">
+			<p>
+				<span>配送方式</span>
+				<span>普通快递</span>
+			</p>
+			<p>
+				<span>发&nbsp;&nbsp;&nbsp;&nbsp;票</span>
+				<span>个人<em>电子</em>发票</span>
+			</p>
+			<p>
+				<span>优惠券</span>
+				<span>无可用<i class="iconfont icon-shenglve"></i></span>
+			</p>
+			<p>
+				<span>商品金额</span>
+				<span class="price">￥7999.00</span>
+			</p>
+			<p>
+				<span>运费（总量 ：<em>15kg</em>）</span>
+				<span>包邮</span>
+			</p>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<span class="price" ref="money">￥{{count}}</span>
+			<span @touchstart="submit"><b>提交订单</b></span>
+		</div>
+		<div class="adder">
+			<p>姓&nbsp;&nbsp;&nbsp;名：<input type="text" v-model="name"></p>
+			<p>手机号：<input type="text" v-model="iphone"></p>
+			<el-select v-model="value" placeholder="请选择" ref="name">
+				<el-option
+				v-for="item in options"
+				:label="item.label"
+				:value="item.value"
+				>
+				</el-option>
+			</el-select>
+			<el-select v-model="value1" placeholder="请选择">
+				<el-option
+				v-for="item in options1"
+				:label="item.label"
+				:value="item.value"
+				>
+				</el-option>
+			</el-select>
+			<p>详细地址：<input type="text"></p>
+			<button type="button" @touchstart="confirm">确定</button>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript" src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+	<script type="text/javascript" src="js/fx.js"></script>
+	<script src="js/public.js"></script>
+	<script src="js/storage.js"></script>
+	<script>
+		var str = $('.number').html();//隐藏部分手机号
+		str = str.replace(/(\d{3})(\d{4})(\d{4})/,"$1****$3")
+		$('.number').html(str);
+		var adder = $('.location').html().substring(0,25)+"...";
+		$('.location').html(adder)//截取一部分地址
+		
+		
+		
+		var product = storage.get('indent');
+		var vm = new Vue({
+			el : '#indent',
+			data : {
+				product,
+				name : '',
+				iphone : '',
+				
+				options: [{
+				  label: '广州市'
+				},],
+				
+				options1: [{
+				  label: '越秀区'
+				}, {
+				  label: '荔湾区'
+				}, {
+				  label: '海珠区'
+				}, {
+				  label: '天河区'
+				},{
+				  label: '白云区'
+				}, {
+				  label: '黄埔区'
+				},{
+				  label: '番禺区'
+				}, {
+				  label: '花都区'
+				}, {
+				  label: '南沙区'
+				}, {
+				  label: '萝岗区'
+				},{
+				  label: '增城市'
+				}, {
+				  label: '从化市'
+				},],
+				 value: '',
+				 value1: '',
+			},
+			methods : {
+				add(item){
+					item.num++;
+				},
+				dis(item){
+					if(item.num <= 1){
+						item.num = 1;
+					}else{
+						item.num--;
+					}
+				},
+				submit(){
+					var price = parseInt(this.$refs.money.innerHTML.substring(1));
+					window.location.href = 'account.html?#price='+price;
+				},
+				changeAdder(){
+					console.log(1)
+				},
+				confirm(){
+					
+					console.log(this.$refs)
+				}
+			},
+			watch : {
+				product : {//检测的数据
+					handler(newValue){
+						//console.log(newValue);
+						window.localStorage.removeItem('indent');//删除这个数据
+						for(var i=0;i<newValue.length;i++){
+							//console.log(newValue[i])
+							storage.set('indent',newValue[i]);//把变化后的数据重新存储起来
+						}
+					},
+					deep:true//深度监测
+				}
+			},
+			computed:{//计算属性
+				count(){
+					var price = null;
+					for(var i=0;i<this.product.length;i++){
+						price += parseInt(this.product[i].price.substring(1))*this.product[i].num
+					}
+					return price;
+				}
+			}
+		})
+	</script>
+</html>

@@ -1,0 +1,303 @@
+@charset 'utf-8';
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* 头部 */
+.header {
+  width: 100%;
+  height: 0.94rem;
+  background: #2861ee;
+  padding: 0 0.2rem;
+  padding-top: 0.22rem;
+  box-sizing: border-box;
+}
+.header span:nth-of-type(1) {
+  width: 0.32rem;
+  height: 0.5rem;
+  float: left;
+  background: url(../img/return_03.png) no-repeat 0 center;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.header span:nth-of-type(2) {
+  float: right;
+  width: 0.45rem;
+  height: 0.45rem;
+  background: url(../img/details1_03.png) no-repeat 0 center;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.header p {
+  float: left;
+  width: 4.02rem;
+  height: 0.61rem;
+  margin-left: 1.09rem;
+  font-size: 0.37rem;
+  color: #fff;
+  text-align: center;
+}
+/* 轮播 */
+.banner {
+  width: 100%;
+  height: 6.88rem;
+}
+.banner .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.banner .swiper-container img {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 0.2rem;
+}
+/* 商品列表 */
+.info {
+  width: 100%;
+}
+.info h3 {
+  width: 100%;
+  font-weight: normal;
+  font-size: 0.3rem;
+  color: #282828;
+}
+.info p {
+  width: 100%;
+  font-size: 0.2rem;
+  color: #989898;
+}
+.info b {
+  font-size: 0.25rem;
+  color: #ff0000;
+  font-weight: normal;
+  display: block;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.info span {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 0.15rem;
+}
+.info span:nth-of-type(1) em {
+  font-size: 0.27rem;
+  color: #656565;
+}
+.info span:nth-of-type(1) em:nth-of-type(1) {
+  float: left;
+}
+.info span:nth-of-type(1) em:nth-of-type(2) {
+  float: right;
+}
+.info span:nth-of-type(2) {
+  height: 0.44rem;
+  line-height: 0.44rem;
+}
+.info span:nth-of-type(2) i {
+  color: #1296db;
+  font-style: normal;
+  font-size: 0.37rem;
+}
+.info span:nth-of-type(2) i:nth-of-type(1) {
+  float: left;
+}
+.info span:nth-of-type(2) i:nth-of-type(2) {
+  float: left;
+  margin-left: 2.2rem;
+}
+.info span:nth-of-type(2) em {
+  font-size: 0.27rem;
+  color: #656565;
+  margin-left: 0.05rem;
+}
+.info span:nth-of-type(2) em:nth-of-type(1) {
+  float: left;
+}
+.info span:nth-of-type(2) em:nth-of-type(2) {
+  float: left;
+}
+/* 评价 */
+.evaluate {
+  width: 100%;
+}
+.evaluate > span {
+  display: block;
+  width: 100%;
+  height: 0.3rem;
+  line-height: 0.3rem;
+}
+.evaluate > span em:nth-of-type(1) {
+  font-size: 0.29rem;
+  color: #282828;
+  float: left;
+}
+.evaluate > span em:nth-of-type(2) {
+  font-size: 0.19rem;
+  color: #282828;
+  float: right;
+}
+.evaluate > span em:nth-of-type(2) i {
+  color: #f5a520;
+  font-style: normal;
+  font-size: 0.15rem;
+}
+.evaluate .label {
+  width: 100%;
+  height: 1.38rem;
+}
+.evaluate .label a {
+  font-size: 0.2rem;
+  color: #282828;
+  background: #e7b92c;
+  margin-left: 0.65rem;
+  -webkit-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.06rem 0.12rem;
+  margin-top: 0.18rem;
+  display: inline-block;
+}
+.evaluate .person {
+  width: 100%;
+  height: 0.9rem;
+  line-height: 0.9rem;
+}
+.evaluate .person img {
+  width: 0.9rem;
+  height: 0.9rem;
+  float: left;
+}
+.evaluate .person span:nth-of-type(1) {
+  float: left;
+  font-size: 0.26rem;
+  color: #282828;
+  padding: 0 0.24rem;
+}
+.evaluate .person span:nth-of-type(2) {
+  float: right;
+}
+.evaluate .person span:nth-of-type(2) i {
+  font-style: normal;
+  font-size: 0.2rem;
+  color: #f39800;
+}
+.evaluate .font {
+  width: 100%;
+}
+.evaluate .font p {
+  width: 100%;
+  color: #282828;
+  font-size: 0.24rem;
+  padding: 0.18rem 0;
+}
+.evaluate .font img {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 0.1rem;
+}
+.evaluate button {
+  width: 3rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  background: #f39800;
+  font-size: 0.29rem;
+  color: #fff;
+  border: none;
+  outline: none;
+  -webkit-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  margin: 0 auto;
+  display: block;
+  margin-top: 0.4rem;
+}
+/* 产品详情 */
+.details {
+  width: 100%;
+  margin-top: 0.18rem;
+}
+.details h3 {
+  font-weight: normal;
+  font-size: 0.34rem;
+  color: #282828;
+  text-align: center;
+  height: 0.75rem;
+  line-height: 0.75rem;
+}
+.details img {
+  width: 100%;
+  height: 8.38rem;
+  display: block;
+}
+/* 底部 */
+.footer {
+  width: 100%;
+  height: 0.98rem;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.footer span {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+.footer span:nth-of-type(1) i {
+  color: #22adec;
+}
+.footer span:nth-of-type(2) i {
+  color: #f39800;
+}
+.footer span:nth-of-type(3) i {
+  color: #e11313;
+}
+.footer span i {
+  font-style: normal;
+  font-size: 0.4rem;
+  display: block;
+}
+.footer span em {
+  font-size: 0.2rem;
+  color: #282828;
+  display: block;
+}
+.footer span:nth-of-type(4) {
+  line-height: 0.98rem;
+}
+.footer span:nth-of-type(4) button {
+  width: 1.6rem;
+  height: 0.5rem;
+  font-size: 0.29rem;
+  color: #fff;
+  border: none;
+  outline: none;
+  -webkit-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.27rem;
+  background: #f39800;
+}
+/* 提示 */
+.tips {
+  width: 4rem;
+  height: 1rem;
+  border: 1px solid #999;
+  background: #fff;
+  font-size: 0.3rem;
+  color: darkred;
+  position: fixed;
+  left: 50%;
+  right: 50%;
+  margin-left: -2rem;
+  margin-top: 7.5rem;
+  z-index: 999;
+  padding: 0.1rem;
+  box-sizing: border-box;
+  display: none;
+}

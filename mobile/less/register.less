@@ -1,0 +1,126 @@
+@charset 'utf-8';
+.background-size(){
+	-webkit-background-size:100% 100%;
+	background-size:100% 100%;
+}
+.boxBorder(@radius){
+	-webkit-border-radius : @radius;
+	border-radius : @radius;
+}
+/* 去掉点击a标签的阴影问题 */
+body{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+a{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+.wrap{
+	width:100%;
+	min-height:13.3rem;
+	background:url(../img/login_bg.png) no-repeat rgba(0,0,0,0.5);
+	.background-size();
+}
+.mask{
+	width:100%;
+	min-height:13.3rem;
+	background:rgba(0,0,0,0.5);
+}
+/* 头部 */
+.header{
+	width:100%;
+	height:0.94rem;
+	padding: 0 0.2rem;
+	padding-top:0.22rem;
+	box-sizing: border-box;
+	span{
+		width:0.32rem;
+		height:0.5rem;
+		float:left;
+		background:url(../img/return_03.png) no-repeat 0 center;
+		.background-size()
+	}
+	p{
+		float:left;
+		width:4.02rem;
+		height:0.61rem;
+		margin-left:1.09rem;
+		font-size: 0.37rem;
+		color:#fff;
+		text-align: center;
+	}
+}
+/* 登录 */
+.register{
+	width:100%;
+	height:5.66rem;
+	margin-top:3rem;
+	p{
+		font-size: 0.3rem;
+		height:0.87rem;
+		text-align: center;
+		color:#fff;
+		input{
+			width:3.3rem;
+			height:0.5rem;
+			color: #fff;
+			border: none;
+			outline: none;
+			background: none;
+			border-bottom: 1px solid #989898;
+		}
+		input::-webkit-input-placeholder{ 
+			color:#c3c3c3;
+			font-size:0.26rem;
+		} 
+		&:nth-of-type(3){
+			span{
+				display:inline-block;
+				width:1.2rem;
+				height:0.4rem;
+				background:#999;
+				vertical-align: middle;
+				img{
+					width:100%;
+					height:100%;
+				}
+			}
+			i{
+				font-style: normal;
+				font-size:0.18rem;
+			}
+		}
+		&:nth-of-type(3) input{
+			width:1.55rem;
+		}
+	}
+	.check{
+		width:100%;
+		text-align: center;
+		display: block;
+		color:#fff;
+		line-height: 0.3rem;
+		height:0.3rem;
+		input{
+			vertical-align: bottom;
+		}
+	}
+	.text{
+		width:100%;
+		height:0.3rem;
+		color:orangered;
+		opacity: 0;
+	}
+	button{
+		width:3rem;
+		height:0.5rem;
+		background: #f39800;
+		color:#fff;
+		font-size: 0.3rem;
+		border:none;
+		outline: none;
+		display: block;
+		margin: 0 auto;
+		.boxBorder(0.22rem) ;
+		margin-top:0.75rem;
+	}
+}

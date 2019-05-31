@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/success.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1198556_wn71palgal.css">
+	<title>支付成功</title>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="header">
+		<span class="header_return"></span>
+		<p>支付状态</p>
+	</div>
+	<div class="wrap">
+		<p>
+			<i class="iconfont icon-iconbaomingyiqueren"></i>
+			<span>支付失败</span>
+		</p>
+		<p>请耐心等待商品送到您的手中，您可以在卖家发货之后查看物流详情！</p>
+		<button>继续购物</button>
+		<button>查看订单</button>
+	</div>
+</body>
+	<script type="text/javascript" src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+	<script type="text/javascript" src="js/fx.js"></script>
+	<script src="js/public.js"></script>
+	<script src="js/success.js"></script>
+	<script>
+		$('.wrap button').eq(0).on('touchstart',function(){
+			window.location.href = 'home.html';
+		})
+		$('.wrap button').eq(1).on('touchstart',function(){
+			window.location.href = 'myorder.html';
+		})
+	</script>
+</html>

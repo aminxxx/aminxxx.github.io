@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/my.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1198556_wn71palgal.css">
+	<title>我的</title>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="header">
+		<p>我的</p>
+		<span></span>
+	</div>
+	<div class="wrap">
+		<!-- 个人信息 -->
+		<div class="info">
+			<img src="img/person_03.png" >
+			<p>你的猫<span class="iconfont icon-shenhebijijishibenxiezi"></span></p>
+		</div>
+		<div class="collect">
+			<span>
+				<em class="iconfont icon-shoucang1"></em>
+				<a href="javascript:;">收藏夹</a>
+			</span>
+			<span>
+				<em class="iconfont icon-zuji1"></em>
+				<a href="javascript:;">足记</a>
+			</span>
+			<span>
+				<em class="iconfont icon-ka"></em>
+				<a href="javascript:;">卡券</a>
+			</span>
+			<span>
+				<em class="iconfont icon-jifen"></em>
+				<a href="javascript:;">积分</a>
+			</span>
+		</div>
+		<!-- 我的订单 -->
+		<div class="indent">
+			<h3>
+				<em>我的订单</em>
+				<em>查看更多订单＞</em>
+			</h3>
+			<div>
+				<span>
+					<em class="iconfont icon-daifukuan"></em>
+					<a href="javascript:;">待付款</a>
+				</span>
+				<span>
+					<em class="iconfont icon-daifahuo"></em>
+					<a href="javascript:;">待发货</a>
+				</span>
+				<span>
+					<em class="iconfont icon-daifahuo"></em>
+					<a href="javascript:;">待收货</a>
+				</span>
+				<span>
+					<em class="iconfont icon-daipingjia"></em>
+					<a href="javascript:;">待评价</a>
+				</span>
+				<span>
+					<em class="iconfont icon-kefu"></em>
+					<a href="javascript:;">售后</a>
+				</span>
+			</div>
+		</div>
+		<!-- 常用工具 -->
+		<div class="tool">
+			<h3>常用工具</h3>
+			<span>
+				<em class="iconfont icon-dizhi"></em>
+				<a href="javascript:;">地址管理</a>
+				<b>＞</b>
+			</span>
+			<span>
+				<em class="iconfont icon-shaidan"></em>
+				<a href="javascript:;">晒单</a>
+				<b>＞</b>
+			</span>
+			<span>
+				<em class="iconfont icon-guanzhu"></em>
+				<a href="javascript:;">我的关注</a>
+				<b>＞</b>
+			</span>
+			<span>
+				<em class="iconfont icon-yijianfankui"></em>
+				<a href="javascript:;">意见反馈</a>
+				<b>＞</b>
+			</span>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<div class="footer">
+		<div>
+			<span class="iconfont icon-yemian "></span>
+			<a href="javascript:;">首页</a>
+		</div>
+		<div>
+			<span class="iconfont icon-huo"></span>
+			<a href="javascript:;">预热</a>
+		</div>
+		<div>
+			<span class="iconfont icon-shangcheng1"></span>
+			<a href="javascript:;">商城</a>
+		</div>
+		<div>
+			<span class="iconfont icon-gouwuche1"></span>
+			<a href="javascript:;">购物车</a>
+		</div>
+		<div>
+			<span class="iconfont icon-jingjirenjinglikehumianxingcopy active"></span>
+			<a href="javascript:;">我的</a>
+		</div>
+	</div>
+</body>
+	<script type="text/javascript" src="https://cdn.bootcss.com/zepto/1.0rc1/zepto.min.js"></script>
+	<script type="text/javascript" src="js/fx.js"></script>
+	<script src="js/public.js"></script>
+	<script>
+		$('.indent h3').on('touchstart',function(){
+			window.location.href='myorder.html';
+		})
+	</script>
+</html>

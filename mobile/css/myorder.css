@@ -1,0 +1,209 @@
+@charset 'utf-8';
+/* 去掉点击a标签的阴影问题 */
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body,
+html {
+  width: 100%;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 0.9rem;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+/* 头部 */
+.header {
+  width: 100%;
+  height: 0.94rem;
+  background: #2861ee;
+  padding: 0 0.2rem;
+  box-sizing: border-box;
+}
+.header span {
+  width: 0.5rem;
+  height: 100%;
+}
+.header span:nth-of-type(1) {
+  float: left;
+  background: url(../img/return_03.png) no-repeat 0 center;
+  background-size: 0.3rem 0.48rem;
+}
+.header span:nth-of-type(2) {
+  float: right;
+  background: url(../img/set_03.png) no-repeat 0 center;
+  background-size: 0.46rem 0.42rem;
+  color: #fff;
+  font-size: 0.32rem;
+  line-height: 0.94rem;
+}
+.header .seach {
+  float: left;
+  width: 4.02rem;
+  height: 0.61rem;
+  margin-left: 1.09rem;
+  margin-top: 0.19rem;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 0.28rem;
+  border-radius: 0.28rem;
+}
+.header .seach input {
+  width: 4.02rem;
+  height: 0.61rem;
+  line-height: 0.61rem;
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-border-radius: 0.28rem;
+  border-radius: 0.28rem;
+  border: none;
+  outline: none;
+  background: url(../img/seach_03.png) no-repeat 0.52rem 0.12rem;
+  background-size: 0.42rem 0.42rem;
+  padding-left: 1rem;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 0.26rem;
+}
+.header .seach input::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 0.26rem;
+}
+/* 内容 */
+.wrap {
+  width: 100%;
+  padding: 0 0.2rem;
+  box-sizing: border-box;
+}
+.wrap .nav {
+  width: 100%;
+  height: 0.9rem;
+  padding-top: 0.2rem;
+  box-sizing: border-box;
+  display: flex;
+}
+.wrap .nav span {
+  float: left;
+  flex: 1;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  font-size: 0.28rem;
+  text-align: center;
+  -webkit-border-radius: 0.38rem;
+  border-radius: 0.38rem;
+}
+.wrap .nav .active {
+  background: #f39800;
+  color: #fff;
+}
+/* 商品 */
+.product {
+  width: 100%;
+  height: 4rem;
+}
+.product .date {
+  width: 100%;
+  overflow: hidden;
+}
+.product .date span:nth-of-type(1) {
+  float: left;
+  font-size: 0.3rem;
+  color: #282828;
+}
+.product .date span:nth-of-type(2) {
+  float: right;
+}
+.product .date span:nth-of-type(2) em {
+  font-size: 0.3rem;
+  color: #282828;
+}
+.product .date span:nth-of-type(2) i {
+  font-size: 0.45rem;
+  color: #656565;
+  margin-left: 0.15rem;
+}
+.product ul {
+  width: 100%;
+}
+.product ul li {
+  width: 100%;
+  padding: 0.38rem 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.product ul li .info {
+  width: 100%;
+  overflow: hidden;
+}
+.product ul li .info > span {
+  float: left;
+  width: 1.8rem;
+  height: 2rem;
+  border: 1px solid #7a7a7a;
+  padding-top: 0.3rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+.product ul li .info > span img {
+  width: 0.9rem;
+  height: 1.45rem;
+}
+.product ul li .info div {
+  float: left;
+  width: 4.38rem;
+  padding-left: 0.2rem;
+}
+.product ul li .info div h3 {
+  font-weight: normal;
+  font-size: 0.31rem;
+  color: #282828;
+}
+.product ul li .info div p {
+  color: #656565;
+  font-size: 0.27rem;
+  margin-bottom: 0.34rem;
+}
+.product ul li .info div div {
+  width: 100%;
+  height: 0.35rem;
+  overflow: hidden;
+}
+.product ul li .info div div b {
+  font-size: 0.26rem;
+  font-weight: normal;
+  color: #ff0000;
+  float: left;
+}
+.product ul li .info div div span {
+  float: right;
+  font-size: 0.18rem;
+  color: #8c8c8c;
+}
+.product ul li .text {
+  width: 100%;
+  text-align: right;
+  height: 0.7rem;
+  color: #282828;
+  font-size: 0.25rem;
+  line-height: 0.7rem;
+}
+.product ul li .text em:nth-of-type(2) {
+  color: red;
+}
+.product ul li .box {
+  width: 100%;
+  text-align: right;
+}
+.product ul li .box span {
+  font-size: 0.27rem;
+  color: #282828;
+  padding: 0.05rem 0.12rem;
+  -webkit-border-radius: 0.38rem;
+  border-radius: 0.38rem;
+  border: 1px solid #282828;
+  margin-left: 0.3rem;
+}
